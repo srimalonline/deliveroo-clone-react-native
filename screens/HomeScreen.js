@@ -13,7 +13,7 @@ const HomeScreen = () => {
   },[]);
   return (
     <View>
-      <Text className='text-red-500'>HomeScreen</Text>
+      <Text className='text-red-500 mt-2'>HomeScreen</Text>
     </View>
   )
 }
