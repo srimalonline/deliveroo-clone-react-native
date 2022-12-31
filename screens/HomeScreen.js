@@ -45,7 +45,7 @@ const HomeScreen = () => {
 
         {/* Search */}
         <View className="flex-row items-center space-x-2 pb-2 mx-4">
-          <View className="flex-row space-x-2 flex-1 bg-gray-200">
+          <View className="flex-row space-x-2 flex-1 p-3 bg-gray-200">
             <MagnifyingGlassIcon color="gray" size={20} />
             <TextInput
               placeholder="Restaurants and cuisines"
