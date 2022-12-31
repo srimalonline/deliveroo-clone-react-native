@@ -9,7 +9,7 @@ import {
   UserIcon,
   MagnifyingGlassIcon,
 } from "react-native-heroicons/outline";
-import { TextInput } from "react-native-web";
+import { ScrollView, TextInput } from "react-native-web";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -56,6 +56,13 @@ const HomeScreen = () => {
           <AdjustmentsVerticalIcon color="#00CCBB"/>
         </View>
       </Text>
+
+      {/* Body  */}
+      <ScrollView>
+          {/* Categories */}
+          
+          {/* Featured Rows */}
+      </ScrollView>
     </SafeAreaView>
   );
 };
