@@ -21,9 +21,9 @@ const HomeScreen = () => {
     });
   }, []);
   return (
-    <SafeAreaView className="bg-white pt-5">
+    <SafeAreaView className="bg-white pt-6">
         {/* Header */}
-        <View className="flex flex-row items-stretch pb-3 mx-4 mt-3 space-x-2">
+        <View className="flex flex-row items-stretch pb-2 mx-4 mt-3 space-x-2">
           <Image
             source={{
               uri: "https://links.papareact.com/wru",
@@ -43,7 +43,7 @@ const HomeScreen = () => {
         </View>
 
         {/* Search */}
-        <View className="flex-row items-center space-x-1 pb-2 mx-4 px-4">
+        <View className="flex-row items-center space-x-1 pb-2 mx-2 px-2">
           <View className="flex-row space-x-2 flex-1 p-3 bg-gray-200 px-4 items-center">
             <MagnifyingGlassIcon color="gray" size={20} />
             <TextInput
