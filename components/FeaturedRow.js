@@ -5,10 +5,12 @@ import { ArrowRightIcon } from "react-native-heroicons/outline";
 const FeaturedRow = ({id, title, description, featuredCategory}) => {
   return (
     <View>
-      <View>
-        <Text>{title}</Text>
-        <ArrowRightIcon />
+      <View className="mt-4 flex-row items-center justify-between px-4">
+        <Text className="font-bold text-lg">{title}</Text>
+        <ArrowRightIcon color="#00CCBB"/>
       </View>
+
+      <Text className="text-xs text-gray-500 px-4">{description}</Text>
     </View>
   );
 };
