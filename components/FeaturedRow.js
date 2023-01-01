@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import { ArrowRightIcon } from "react-native-heroicons/outline";
 
-const FeaturedRow = ( title, description, featuredCategory ) => {
+const FeaturedRow = ({id, title, description, featuredCategory}) => {
   return (
     <View>
-      <Text>FeaturedRow</Text>
+      <View>
+        <Text>{title}</Text>
+        <ArrowRightIcon />
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default FeaturedRow
+export default FeaturedRow;
