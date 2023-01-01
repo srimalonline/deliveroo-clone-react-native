@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { ScrolView, Text } from 'react-native'
 import React from 'react'
 
 const Categories = () => {
   return (
-    <View>
+    // <ScrolView className="mx-3">
+
       <Text>categories</Text>
-    </View>
+    // </ScrolView>
   )
 }
 
