@@ -22,9 +22,8 @@ const HomeScreen = () => {
   }, []);
   return (
     <SafeAreaView className="bg-white pt-5">
-      <Text className="text-red-500">
         {/* Header */}
-        <View className="flex-row pb-3 items-center mx-4 space-x-2">
+        <View className="flex flex-row items-stretch pb-3 mx-6 mt-3 space-x-2">
           <Image
             source={{
               uri: "https://links.papareact.com/wru",
@@ -56,7 +55,6 @@ const HomeScreen = () => {
 
           <AdjustmentsVerticalIcon color="#00CCBB"/>
         </View>
-      </Text>
 
       {/* Body  */}
       <ScrollView className="bg-gray-100">
