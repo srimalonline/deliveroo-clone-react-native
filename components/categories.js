@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const categories = () => {
+const Categories = () => {
   return (
     <View>
       <Text>categories</Text>
@@ -9,4 +9,4 @@ const categories = () => {
   )
 }
 
-export default categories
+export default Categories
