@@ -1,5 +1,12 @@
-import { View, Text, SafeAreaView, Image, ScrollView, TextInput } from "react-native";
-import React, { useLayoutEffect } from "react";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Image,
+  ScrollView,
+  TextInput,
+} from "react-native";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   userIcon,
@@ -12,16 +19,36 @@ import {
 
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
-
+import sanityClient from "../sanaty";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [featuredCategories, setFeaturedCategories] = useState([]);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });
   }, []);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `
+      *[_type == 'featured'] {
+      ...,
+      restaurants[]->{
+        ...,
+        dishes[]->
+          }
+    }`
+      )
+      .then((data) => {
+        setFeaturedCategories(data);
+      });
+  }, []);
+
+  console.log(featuredCategories);
   return (
     <SafeAreaView className="bg-white pt-5">
       {/* Header */}
@@ -56,22 +83,23 @@ const HomeScreen = () => {
       </View>
 
       {/* Body  */}
-      <ScrollView className="bg-gray-100"
-      contentContainerStyle={{ 
-        paddingBottom: 100,
-       }}>
-
+      <ScrollView
+        className="bg-gray-100"
+        contentContainerStyle={{
+          paddingBottom: 100,
+        }}
+      >
         {/* Categories */}
         <Categories />
 
         {/* Featured Rows */}
-        <FeaturedRow 
-            id="01"
-            title="Featured"
-            description="Paid Placement from our partners"
-            featuredCategory="featured"
-            />
-          </ScrollView>
+        <FeaturedRow
+          id="01"
+          title="Featured"
+          description="Paid Placement from our partners"
+          featuredCategory="featured"
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 };
