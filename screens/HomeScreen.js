@@ -43,13 +43,13 @@ const HomeScreen = () => {
           }
     }`
     )
-      .then(data => {
+      .then((data) => {
         setFeaturedCategories(data);
       });
   }, []);
 
   console.log(featuredCategories);
-  
+
   return (
     <SafeAreaView className="bg-white pt-5">
       {/* Header */}
@@ -95,21 +95,21 @@ const HomeScreen = () => {
 
         {/* Featured Rows */}
 
-        {/* {featuredCategories?.map(category => (
+        {featuredCategories?.map(category => (
           <FeaturedRow
           key={category._id}
           id={category._id}
           title={category.name}
           description={category.short_description}
         />
-        ))} */}
+        ))}
         
-        <FeaturedRow
+        {/* <FeaturedRow
           id="01"
           title="Featured"
           description="Paid Placement from our partners"
           featuredCategory="featured"
-        />
+        /> */}
       </ScrollView>
     </SafeAreaView>
   );
