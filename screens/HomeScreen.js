@@ -104,12 +104,6 @@ const HomeScreen = () => {
         />
         ))}
         
-        {/* <FeaturedRow
-          id="01"
-          title="Featured"
-          description="Paid Placement from our partners"
-          featuredCategory="featured"
-        /> */}
       </ScrollView>
     </SafeAreaView>
   );
