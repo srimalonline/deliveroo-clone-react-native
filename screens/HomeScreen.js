@@ -19,7 +19,7 @@ import {
 
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
-import sanityClient from "../sanaty";
+import sanityClient from "../sanity";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -30,7 +30,7 @@ const HomeScreen = () => {
       headerShown: false,
     });
   }, []);
-
+ 
   useEffect(() => {
     sanityClient
       .fetch(
@@ -43,12 +43,13 @@ const HomeScreen = () => {
           }
     }`
     )
-      .then((data) => {
+      .then(data => {
         setFeaturedCategories(data);
       });
   }, []);
 
   console.log(featuredCategories);
+  
   return (
     <SafeAreaView className="bg-white pt-5">
       {/* Header */}
