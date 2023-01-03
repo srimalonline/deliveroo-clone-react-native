@@ -31,24 +31,24 @@ const HomeScreen = () => {
     });
   }, []);
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `
-      *[_type == 'featured'] {
-      ...,
-      restaurants[]->{
-        ...,
-        dishes[]->
-          }
-    }`
-      )
-      .then((data) => {
-        setFeaturedCategories(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `
+  // *[_type == 'featured'] {
+  //     ...,
+  //     restaurants[]->{
+  //       ...,
+  //       dishes[]->
+  //         }
+  //   }`
+  //   )
+  //     .then((data) => {
+  //       setFeaturedCategories(data);
+  //     });
+  // }, []);
 
-  console.log(featuredCategories);
+  // console.log(featuredCategories);
   return (
     <SafeAreaView className="bg-white pt-5">
       {/* Header */}
@@ -93,6 +93,16 @@ const HomeScreen = () => {
         <Categories />
 
         {/* Featured Rows */}
+
+        {/* {featuredCategories?.map(category => (
+          <FeaturedRow
+          key={category._id}
+          id={category._id}
+          title={category.name}
+          description={category.short_description}
+        />
+        ))} */}
+        
         <FeaturedRow
           id="01"
           title="Featured"
