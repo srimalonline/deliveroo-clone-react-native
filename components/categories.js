@@ -29,8 +29,6 @@ const Categories = () => {
       {categories.map(category => (
         <CategoryCard
         key={category._id}  
-        // imgUrl={urlFor(category.image.asset._ref).width(200).url()} 
-        // image={category._ref.image}
         title={category.title} />
       ))}
 
