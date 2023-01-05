@@ -14,6 +14,8 @@ const Categories = () => {
       setCategories(data);
     })
   },[])
+
+  console.log(categories);
   return (
     <ScrollView 
     contentContainerStyle={{ 
@@ -27,8 +29,8 @@ const Categories = () => {
       {categories.map(category => (
         <CategoryCard 
         key={category._id}  
-        // imgUrl={urlFor(category.image).width(200).url()} 
-        imgUrl='https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80'
+        // imgUrl={urlFor(category.image.asset._ref).width(200).url()} 
+        // image={category._ref.image}
         title={category.title} />
       ))}
 
