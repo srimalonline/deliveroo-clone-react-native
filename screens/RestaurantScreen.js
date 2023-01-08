@@ -2,8 +2,8 @@ import { ScrollView, View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { urlFor } from '../sanity'
-import { ArrowLeftIcon, MapPinIcon } from 'react-native-heroicons/outline'
-import { StarIcon  } from "react-native-heroicons/solid";
+import { StarIcon } from "react-native-heroicons/solid";
+import { ArrowLeftIcon, MapPinIcon, } from 'react-native-heroicons/outline'
 
 const RestaurantScreen = () => {
     const navigation = useNavigation();
@@ -45,8 +45,12 @@ const RestaurantScreen = () => {
         <View className="px-4 pt-4">
             <Text className="text-3xl font-bold">{title}</Text>
             <View className="flew-row space-x-2 my-1"></View>
-            <View>
+            <View className="flex-row iteams-center space-x-1">
                 <StarIcon color="green" opacity={0.5} size={22} />
+                <Text className="text-xs text-gray-500">
+                  <Text className="text-green-500">{rating} </Text> . Sri Lankan 
+                  {/* {genre} genre should implemet in sanity project */}
+                </Text>
             </View>
         </View>
       </View>
