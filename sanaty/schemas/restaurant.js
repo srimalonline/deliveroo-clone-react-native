@@ -56,7 +56,7 @@ export default defineType({
       to: [{ type: "category"}],
     },
     {
-      name: "deshes",
+      name: "dishes",
       type: "array",
       title: "Dishes",
       of: [{ type: "reference", to: [{ type: "dish"}] }],
