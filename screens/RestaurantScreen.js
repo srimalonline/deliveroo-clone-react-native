@@ -68,6 +68,15 @@ const RestaurantScreen = () => {
           <ChevronRightIcon color="#00CCBB" />
         </TouchableOpacity>
       </View>
+
+      <View>
+        <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
+
+        {/* Dishrows */}
+        {dishes.map(dish => (
+          
+        ))}
+      </View>
     </ScrollView>
   )
 }
