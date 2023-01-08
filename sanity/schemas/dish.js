@@ -11,6 +11,8 @@ export default defineType({
       title: "Name of dish",
       validation: (Rule) => Rule.required(),
     },
+
+    // short spelling wrong
     {
       name: "shrt_description",
       type: "string",
