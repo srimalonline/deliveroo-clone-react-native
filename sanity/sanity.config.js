@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'deliveroo-clone',
 
-  projectId: 'em9vbvm2',
+  projectId: 'gbzd1ekv',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
