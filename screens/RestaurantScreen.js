@@ -79,7 +79,7 @@ const RestaurantScreen = () => {
             key={dish._id}
             id={dish._id}
             name={dish.name}
-            description={dish.shrt_description}
+            description={dish.short_description}
             price={dish.price}
             image={dish.image}
           />
