@@ -14,7 +14,7 @@ export default defineType({
 
     // short spelling wrong
     {
-      name: "shrt_description",
+      name: "short_description",
       type: "string",
       title: "Short Description",
       validation: (Rule) => Rule.max(200),
