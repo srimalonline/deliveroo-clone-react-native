@@ -36,7 +36,9 @@ const DishRow = ({ id, name, description, price, image }) => {
         <View>
           <View>
             <TouchableOpacity onPress={()=> setIsPressed(false)}>
-             <Text>Fuck You</Text>
+             <Text>
+              {/* add + and - buttons to the coner */}
+             </Text>
             </TouchableOpacity>
           </View>
         </View>
