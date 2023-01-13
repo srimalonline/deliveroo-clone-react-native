@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React, {useState} from "react";
 import Curreny from "react-currency-formatter";
 import { urlFor } from "../sanity";
+import { MinusCircleIcon, PlusCircleIcon } from "react-native-heroicons/solid"
 
 const DishRow = ({ id, name, description, price, image }) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -37,7 +38,7 @@ const DishRow = ({ id, name, description, price, image }) => {
           <View>
             <TouchableOpacity onPress={()=> setIsPressed(false)}>
              <Text>
-              {/* add + and - buttons to the coner */}
+             <MinusCircleIcon color={items.length > 0 ? "#00CCBB" : "gray"} size={40}/>
              </Text>
             </TouchableOpacity>
           </View>
