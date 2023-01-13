@@ -9,7 +9,7 @@ const DishRow = ({ id, name, description, price, image }) => {
 
   return (
     <>
-      <TouchableOpacity className="bg-white border p-4 border-gray-200" onPress={() =>        setIsPressed(true)}>
+      <TouchableOpacity className="bg-white border p-4 border-gray-200" onPress={() =>        setIsPressed(!isPressed)}>
         <View className="flex-row ">
           <View className="flex-1 or-2">
             <Text className="text-lg mb-1">{name}</Text>
@@ -36,9 +36,12 @@ const DishRow = ({ id, name, description, price, image }) => {
       {isPressed && (
         <View>
           <View>
-            <TouchableOpacity onPress={()=> setIsPressed(false)}>
-             <Text>
-             <MinusCircleIcon color={items.length > 0 ? "#00CCBB" : "gray"} size={40}/>
+            <TouchableOpacity>
+             <Text> Text
+             <MinusCircleIcon 
+            //  color={items.length > 0 ? "#00CCBB" : "gray"} 
+            color="#00CCBB"
+             size={40}/>
              </Text>
             </TouchableOpacity>
           </View>
