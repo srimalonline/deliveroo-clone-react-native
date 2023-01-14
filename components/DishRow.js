@@ -6,7 +6,7 @@ import { MinusCircleIcon, PlusCircleIcon } from "react-native-heroicons/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, 
           selectBasketItems,
-          selectBasketItemsWithId } from "../features/basketSlice";az
+          selectBasketItemsWithId } from "../features/basketSlice";
 
 const DishRow = ({ id, name, description, price, image }) => {
   const [isPressed, setIsPressed] = useState(false);
