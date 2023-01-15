@@ -12,7 +12,7 @@ const BasketIcon = () => {
 
   return (
     <View className="absolute bottom-10 w-full z-50">
-      <TouchableOpacity className="bg-[#00CCBB] mx-5 flex-row items-center">
+      <TouchableOpacity className="bg-[#00CCBB] mx-5 p-4 rounded-lg flex-row items-center">
       <Text>{items.length}</Text>
       <Text>View Basket</Text>
       <Text className="text-lg text-white font-extrabold">
