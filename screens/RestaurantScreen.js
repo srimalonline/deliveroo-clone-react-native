@@ -36,7 +36,7 @@ const RestaurantScreen = () => {
   }, []);
   return (
     <>
-    <BasketIcon onPress={navigation.navigate('Basket')}/>
+    <BasketIcon />
       <ScrollView>
         <View className="relative">
           <Image
