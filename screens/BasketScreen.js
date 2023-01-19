@@ -4,7 +4,8 @@ import { ScrollView } from 'react-native'
 
 const BasketScreen = () => {
   return (
-    <ScrollView>
+    <ScrollView horizontal
+    className="flex-row">
       <Text>BasketScreen</Text>
     </ScrollView>
   )
