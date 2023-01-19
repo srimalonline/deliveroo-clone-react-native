@@ -3,7 +3,7 @@ import React from 'react'
 
 const BasketScreen = () => {
   return (
-    <View>
+    <View className="">
       <Text>BasketScreen</Text>
     </View>
   )
