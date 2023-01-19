@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { ScrollView, View, Text } from 'react-native'
 import React from 'react'
+import { ScrollView } from 'react-native'
 
 const BasketScreen = () => {
   return (
-    <View className="">
+    <ScrollView>
       <Text>BasketScreen</Text>
-    </View>
+    </ScrollView>
   )
 }
 
