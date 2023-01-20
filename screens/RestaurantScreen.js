@@ -37,8 +37,8 @@ const RestaurantScreen = () => {
   return (
     <>
     <BasketIcon />
-        <View className="relative">
       <ScrollView>
+        <View className="relative">
           <Image
             source={{
               uri: urlFor(imgUrl).url(),
