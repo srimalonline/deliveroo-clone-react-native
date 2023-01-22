@@ -24,14 +24,8 @@ export const restaurantSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addToBasket, removeFromBasket } = restaurantSlice.actions;
+export const { setRestaurant } = restaurantSlice.actions;
 
-export const selectBasketItems = (state) => state.basket.items;
-
-export const selectBasketItemsWithId = (state, id) => 
-  state.basket.items.filter((item) => item.id === id);
-
-export const selectBasketTotal = (state) =>state.basket.items.reduce((total, item) => 
-total += item.price, 0)
+export const selectRestaurant = (state) => state.restaurant.items;
 
 export default restaurantSlice.reducer;
