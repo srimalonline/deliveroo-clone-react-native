@@ -1,16 +1,16 @@
-import {  View, Text } from 'react-native'
+import {  SafeAreaView,View, Text } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
 import { selectBasketItems } from '../features/basketSlice';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const BasketScreen = () => {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
   const items = useSelector(selectBasketItems);
-  cont [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
+  const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
   const dispath = useDispatch();
 
   useEffect(() => {
@@ -25,9 +25,16 @@ const BasketScreen = () => {
   console.log(groupedItemsInBasket);
 
   return (
-    <View>
-      <Text>BasketScreen</Text>
-    </View>
+    <SafeAreaView className="pt-10">
+     <View>
+      <View>
+        <View>
+          <Text className="text-lg font-bold text-center">Basket</Text>
+          <Text className="text-center text-gray-400">Nandos</Text>
+        </View>
+      </View>
+     </View>
+    </SafeAreaView>
   )
 }
 
