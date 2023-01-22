@@ -13,7 +13,10 @@ const BasketScreen = () => {
   const dispath = useDispatch();
 
   useMemo(() => {
-
+    const groupedItems = items.reduce((results, item) => {
+      (results[item.id] = results[item.id] || []).push(item);
+      return results;
+    }, {} )
   },[items])
 
   return (
