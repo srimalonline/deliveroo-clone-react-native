@@ -32,6 +32,9 @@ const BasketScreen = () => {
           <Text className="text-lg font-bold text-center">Basket</Text>
           <Text className="text-center text-gray-400">Nandos</Text>
         </View>
+        <View>
+          <Text>Test</Text>
+        </View>
       </View>
      </View>
     </SafeAreaView>
