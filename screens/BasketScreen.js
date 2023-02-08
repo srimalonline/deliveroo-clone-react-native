@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectRestaurant } from '../features/restaurantSlice';
 import { selectBasketItems } from '../features/basketSlice';
 import { useEffect, useState } from 'react';
+import { XCircleIcon } from 'react-native-heroicons/solid'
 
 const BasketScreen = () => {
   const navigation = useNavigation();
@@ -30,11 +31,13 @@ const BasketScreen = () => {
       <View>
         <View>
           <Text className="text-lg font-bold text-center">Basket</Text>
-          <Text className="text-center text-gray-400">Nandos</Text>
+          <Text className="text-center text-gray-400">test</Text>
         </View>
-        <View>
-          <Text>Test</Text>
-        </View>
+        <TouchableOpacity
+        onPress={navigation.goBack}
+        >
+          <XCircleIcon color="#00CCBB" height={50} width={50}/>
+        </TouchableOpacity>
       </View>
      </View>
     </SafeAreaView>
