@@ -36,7 +36,7 @@ const BasketScreen = () => {
         <TouchableOpacity
         onPress={navigation.goBack}
         >
-          <Text>Close</Text>
+          <Text className="text-sm">Close</Text>
           <XCircleIcon color="#00CCBB" height={50} width={50}/>
         </TouchableOpacity>
       </View>
