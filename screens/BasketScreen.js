@@ -23,15 +23,13 @@ const BasketScreen = () => {
     setGroupedItemsInBasket(groupedItems);
   },[items])
 
-  // console.log(groupedItemsInBasket);
-
   return (
     <SafeAreaView className="pt-10">
      <View>
       <View>
         <View>
           <Text className="text-lg font-bold text-center">Basket</Text>
-          <Text className="text-center text-gray-400">test</Text>
+          <Text className="text-center text-gray-400">{restaurant.title}</Text>
         </View>
         <TouchableOpacity
         onPress={navigation.goBack}
