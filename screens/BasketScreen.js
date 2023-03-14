@@ -23,7 +23,7 @@ const BasketScreen = () => {
     setGroupedItemsInBasket(groupedItems);
   },[items])
 
-  console.log(groupedItemsInBasket);
+  // console.log(groupedItemsInBasket);
 
   return (
     <SafeAreaView className="pt-10">
