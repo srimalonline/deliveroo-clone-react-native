@@ -39,6 +39,10 @@ const DeliveryScreen = () => {
           />
           </View>
           <Progress.Bar size={30} color="#00CCBB" indeterminate={true} />
+
+          <Text className="mt-3 text-gray-500">
+            Your order at {restaurant.title} is being prepared
+          </Text>
         </View>
       </View>
     </SafeAreaView>
