@@ -9,7 +9,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import { selectRestaurant } from "../features/restaurantSlice";
-import { selectBasketItems, removeFromBasket } from "../features/basketSlice";
+import { selectBasketItems, removeFromBasket, selectBasketTotal } from "../features/basketSlice";
 import { useEffect, useState } from "react";
 import { XCircleIcon } from "react-native-heroicons/solid";
 import { urlFor } from "../sanity";
@@ -20,6 +20,7 @@ const BasketScreen = () => {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
   const items = useSelector(selectBasketItems);
+  const basketTotal = useSelector(selectBasketTotal);
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
   const dispatch = useDispatch();
 
@@ -85,6 +86,29 @@ const BasketScreen = () => {
             </View>
             ))}
         </ScrollView>
+
+        <View className="p-5 bg-white mt-5 space-y-4">
+          <View className="flex-row justify-between">
+            <Text className="text-gray-400">Subtotal</Text>
+            <Text className="text-gray-400" >
+              <Curreny quantity={basketTotal} currency="LKR"></Curreny>
+            </Text>
+          </View>
+
+          <View className="flex-row justify-between">
+            <Text className="text-gray-400">Delivery</Text>
+            <Text className="text-gray-400" >
+              <Curreny quantity={basketTotal*0.1 + 250} currency="LKR"></Curreny>
+            </Text>
+          </View>
+
+          <View className="flex-row justify-between">
+            <Text>Order Total</Text>
+            <Text className="font-extrabold" >
+              <Curreny quantity={basketTotal+ basketTotal*0.1 + 250} currency="LKR"></Curreny>
+            </Text>
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );
