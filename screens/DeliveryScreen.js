@@ -11,6 +11,7 @@ import { useNavigation } from "@react-navigation/native";
 import { selectRestaurant } from "../features/restaurantSlice";
 import { XCircleIcon } from "react-native-heroicons/solid";
 import * as Progress from "react-native-progress";
+import MapView, { Marker } from "react-native-maps";
 
 const DeliveryScreen = () => {
   const navigation = useNavigation();
@@ -19,8 +20,8 @@ const DeliveryScreen = () => {
     <SafeAreaView className="bg-[#00CCBB] flex-1">
       <View className="z-50 p-5 pt-10">
         <View className="flex-row justify-between items-center">
-          <TouchableOpacity>
-            <XCircleIcon color="white" height={50} width={50} />
+          <TouchableOpacity onPress={ () => navigation.navigate("Home")}>
+            <Text className="text-2xl text-white">X</Text>
           </TouchableOpacity>
           <Text className="text-white text-lg">Order Help</Text>
         </View>
@@ -45,6 +46,29 @@ const DeliveryScreen = () => {
           </Text>
         </View>
       </View>
+      <MapView
+        initialRegion={{
+            // latitude: restaurant.lat,
+            latitude: 6.927079,
+            // longitude: restaurant.long,
+            longitude:  79.861244,
+            latitudeDelta: 0.005,
+            longitudeDelta: 0.005,
+        }}
+        className="flex-1 -mt-10 z-0"
+        mapType="mutedStandard"
+        >
+      <Marker 
+        coordinate={{ 
+            latitude: 6.927079,
+            longitude:  79.861244
+         }}
+         title={restaurant.title}
+         description={restaurant.short_description}
+         identifier="origin"
+         pinColor="#00CCBB"
+      />
+      </MapView>
     </SafeAreaView>
   );
 };
