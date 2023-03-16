@@ -1,4 +1,10 @@
-import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
+import {
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
@@ -19,9 +25,17 @@ const DeliveryScreen = () => {
         </View>
 
         <View className="bg-white mx-5 my-2 rounded-md p-6 z-50 shadow-md">
+          <View className="flex-row justify-between">
           <View>
             <Text className="text-lg text-gray-400">Estimated Arrival</Text>
             <Text className="text-4xl font-bold">30-40 min</Text>
+          </View>
+          <Image
+            source={{
+              uri: "https://links.papareact.com/fls",
+            }}
+            className="h-20 w-20"
+          />
           </View>
         </View>
       </View>
