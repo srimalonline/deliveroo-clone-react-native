@@ -17,8 +17,8 @@ const DeliveryScreen = () => {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
   return (
-    <SafeAreaView className="bg-[#00CCBB] flex-1">
-      <View className="z-50 p-5 pt-10">
+    <View className="bg-[#00CCBB] flex-1">
+      <SafeAreaView className="z-50 p-5 pt-10">
         <View className="flex-row justify-between items-center">
           <TouchableOpacity onPress={ () => navigation.navigate("Home")}>
             <Text className="text-2xl text-white">X</Text>
@@ -45,7 +45,7 @@ const DeliveryScreen = () => {
             Your order at {restaurant.title} is being prepared
           </Text>
         </View>
-      </View>
+      </SafeAreaView>
       <MapView
         initialRegion={{
             // latitude: restaurant.lat,
@@ -69,7 +69,23 @@ const DeliveryScreen = () => {
          pinColor="#00CCBB"
       />
       </MapView>
-    </SafeAreaView>
+
+      <SafeAreaView className="bg-white flex-row items-center space-x-5 h-24">
+      <Image
+          source={{
+            uri: "https://links.papareact.com/wru",
+          }}
+          className="h-12 w-12 bg-gray-300 p-4 rounded-full ml-5"
+        />
+        <View className="flex-1">
+            <Text className="text-lg">Srimal Fernando</Text>
+            <Text className="text-gray-400">Your Rider</Text>
+        </View>
+        <Text className="text-[#00CCBB] text-lg mr-5 font-bold">Call</Text>
+      </SafeAreaView>
+
+    
+    </View>
   );
 };
 
