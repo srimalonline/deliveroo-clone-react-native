@@ -9,17 +9,19 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import { selectRestaurant } from "../features/restaurantSlice";
-import { selectBasketItems } from "../features/basketSlice";
+import { selectBasketItems, removeFromBasket } from "../features/basketSlice";
 import { useEffect, useState } from "react";
 import { XCircleIcon } from "react-native-heroicons/solid";
 import { urlFor } from "../sanity";
+import Curreny from "react-currency-formatter";
+
 
 const BasketScreen = () => {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
   const items = useSelector(selectBasketItems);
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([]);
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const groupedItems = items.reduce((results, item) => {
@@ -70,6 +72,16 @@ const BasketScreen = () => {
                 className ="h-12 w-12 rounded-full"
               />
               <Text className="flex-1">{items[0]?.name}</Text>
+              <Text className="text-gray-600">
+                <Curreny quantity={items[0]?.price} currency="LKR"/>
+              </Text>
+
+              <TouchableOpacity>
+                <Text className="text-[#00CCBB] text-xs"
+                  onPress={ ()=> dispatch(removeFromBasket({ id: key}))}>
+                  Romove
+                </Text>
+              </TouchableOpacity>
             </View>
             ))}
         </ScrollView>
