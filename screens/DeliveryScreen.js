@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { selectRestaurant } from "../features/restaurantSlice";
 import { XCircleIcon } from "react-native-heroicons/solid";
+import * as Progress from "react-native-progress";
 
 const DeliveryScreen = () => {
   const navigation = useNavigation();
@@ -37,6 +38,7 @@ const DeliveryScreen = () => {
             className="h-20 w-20"
           />
           </View>
+          <Progress.Bar size={30} color="#00CCBB" indeterminate={true} />
         </View>
       </View>
     </SafeAreaView>
