@@ -20,7 +20,7 @@ Copy code
 
 Then, clone the repository and install the dependencies:
 
-bashCopy code
+Copy code
 
     git clone https://github.com/srimalonline/deliveroo-clone-react-native.git
     cd deliveroo-clone-react-native
@@ -28,7 +28,7 @@ bashCopy code
 
 Finally, start the Expo development server:
 
-sqlCopy code
+Copy code
 
     expo start
 
