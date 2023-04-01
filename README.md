@@ -1,5 +1,5 @@
 
-# Deliveroo Clone React Native
+# Deliveroo Clone - React Native
 
 This is a Deliveroo clone built using React Native and Expo. It is a mobile application that allows users to order food from restaurants and have it delivered to their location.
 
